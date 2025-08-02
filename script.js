@@ -22,8 +22,7 @@ function displayBooks() {
 
   myLibrary.forEach(book => {
     const card = document.createElement('div');
-    card.classList.add('book-card'); // 🟢 مطابق لـ CSS
-
+    card.classList.add('book-card'); 
     card.innerHTML = `
       <h3>${book.title}</h3>
       <p>Author: ${book.author}</p>
@@ -33,7 +32,7 @@ function displayBooks() {
       <button class="remove-book">Remove</button>
     `;
 
-    // ➕ نربط الأحداث بعد إنشاء الكارت
+    
     const toggleBtn = card.querySelector('.toggle-read');
     const removeBtn = card.querySelector('.remove-book');
 
@@ -69,5 +68,5 @@ document.getElementById('book-form').addEventListener('submit', function (e) {
   this.style.display = 'none';
 });
 
-// كتاب تجريبي
+
 addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, false);
